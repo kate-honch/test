@@ -1,0 +1,329 @@
+.header {
+    height: 800px;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5acd6b71da02bcf0fc160fce/1530042443340-4JVT1P6F8G2LJCASBEAC/banner-3.jpg?format=2500w");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    &__nav,
+    &__main {
+        display: none;
+    }
+
+    &__logo {
+        display: block;
+        position: relative;
+        width: 62px;
+        margin: 0 auto;
+        z-index: 6;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 85px;
+        background: linear-gradient(to bottom,#7898be,rgba(120,152,190,0));
+        z-index: 6;
+    }
+
+    &__block {
+        display: flex;
+    }
+
+    &__container {
+        padding: 20px;
+    }
+
+    &__mob {
+        &--btn {
+            position: relative;
+            padding: 0;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            filter: invert(1);
+            z-index: 6;
+
+            &-close {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            &-open {
+                display: block;
+
+                &.hide {
+                    display: none;
+                }
+            }
+        }
+
+        &--nav {
+            display: none;
+    
+            &.active {
+                display: block;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                padding: 100px 0;
+                z-index: 5;
+                background-color: rgba(194,63,62,.97);
+            }
+    
+            li {
+                position: relative;
+                padding: 0.5em 0;
+                font-size: 24px;
+                font-family: proxima-nova;
+                font-weight: 700;
+                font-style: normal;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-decoration: none;
+                line-height: 1em;
+                text-align: center;
+    
+                a {
+                    color: #fff;
+                    text-decoration: none;
+    
+                    &:hover {
+                        color: rgba(255,255,255,.75);
+                        transition: 0.3s;
+                    }
+                }
+
+                &:first-child {
+                    margin: 12px 0;
+
+                    a {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translate(-50%,0);
+                        background-image: url(../../images/house.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 30px;
+                        height: 30px;
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+    }
+
+    &__text {
+        margin-top: 160px;
+
+        h3 {
+            margin-bottom: 24px;
+            font-family: filson-soft;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            line-height: 1.4em;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            font-family: filson-soft;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 36px;
+            line-height: 1.1em;
+            letter-spacing: 0em;
+            text-transform: none;
+            color: #fff;
+        }
+    }
+
+    &__loc {
+        display: inline-block;
+        position: relative;
+        padding: 13px 24px 13px 27px;
+        font-family: filson-soft;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 300px;
+        border-color: #fff;
+        box-shadow: 0 2px 0 0 #ebebeb;
+        color: #5c5c5c;
+        background-color: #fff;
+        text-decoration: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: 11px;
+            width: 14px;
+            height: 14px;
+            background-image: url(../../images/location.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            background: #bbc4f59c;
+            transition: 0.4s;
+        }
+    }
+
+    &__view {
+        padding: 20px 10px 20px 20px;
+        font-size: 12px;
+
+        &::before {
+            top: 18.5px;
+            left: 4px;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .header {
+        height: 920px;
+
+        &__block {
+            display: none;
+        }
+
+        &__nav {
+            &.active {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 42.5px;
+                background-color: #c23f3e;
+                
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+
+                    li {
+                        margin-right: 36px;
+                        font-family: proxima-nova;
+                        font-weight: 700;
+                        font-style: normal;
+                        font-size: 13px;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        line-height: 1em;
+            
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+            
+                            &:hover {
+                                color: rgba(255,255,255,.75);
+                                transition: 0.3s;
+                            }
+                        }
+        
+                        &:first-child {
+                            a {
+                                img {
+                                    filter: invert(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__main {
+            display: block;
+
+            &--logo {
+                display: block;
+                width: 180px;
+                max-width: 180px;
+                height: auto;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            nav {
+                margin-top: 20px;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    li {
+                        margin-left: 25px;
+                        font-family: proxima-nova;
+                        font-weight: 700;
+                        font-style: normal;
+                        font-size: 13px;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        line-height: 1em;
+
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+
+                            img {
+                                filter: invert(1);
+                            }
+
+                            &:hover {
+                                color: rgba(255,255,255,.75);
+                                transition: 0.4s;
+                            }
+                        }
+
+                        &:last-of-type {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__text {
+            margin-top: 120px;
+
+            h1 {
+                font-size: 60px;
+                width: 388px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+

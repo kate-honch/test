@@ -1,0 +1,98 @@
+.footer {
+    padding: 40px 20px ;
+    font-family: proxima-nova;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: .3px;
+    line-height: 1.6em;
+    color: #fff;
+    background-color: #c23f3e;
+
+    &__link {
+        margin-bottom: 40px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        border-bottom-width: 0;
+        line-height: 1.25em;
+        color: #fff;
+
+        &:hover {
+            color: #ccc;
+            transition: 0.4s;
+        }
+    }
+
+    h2 {
+        margin-bottom: 35px;
+        font-size: 27px;
+        line-height: 1.2em;
+        text-align: center;
+    }
+
+    form {
+        margin-bottom: 60px;
+
+        input {
+            width: -webkit-fill-available;
+            margin-bottom: 20px;
+            padding: 1em;
+            background: #fff;
+            border: 1px solid rgba(0,0,0,.12);
+            font-family: inherit;
+            font-size: 15px;
+            line-height: normal;
+            outline: none;
+        }
+
+        button {
+            border-radius: 300px;
+            border: none;
+            display: block;
+            margin: 0 auto;
+            padding: 1em 2.5em;
+            border-width: 0;
+            text-align: center;
+            color: #5c5c5c;
+            background-color: #fff;
+            border: none;
+            font-family: inherit;
+            font-size: 15px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e5ccccdb;
+                transition: 0.4s;
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 35px;
+        text-align: center;
+        font-family: proxima-nova;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+        letter-spacing: .3px;
+        line-height: 1.6em;
+
+        a {
+            padding-bottom: 5px;
+            color: #fff;
+            border-bottom: 1px solid rgba(255,255,255,.3);
+            text-decoration: none;
+
+            &:hover {
+                border-bottom: 1px solid #fff;
+            }
+        }
+    }
+
+    &__logo {
+        height: 135px;
+        display: block;
+        margin: 0 auto;
+    }
+}
